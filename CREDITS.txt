@@ -1,0 +1,9 @@
+How to make a Video Game - Godot Beginner Tutorial
+https://www.youtube.com/watch?v=LOhfqjmasi0
+
+Pixel Platformer by Kenney (https://kenney.nl/assets/pixel-platformer)
+
+Animated Priest by Calciumtrice and Recolored by Merry Dream Games, usable under Creative Commons Attribution 3.0 license.
+https://opengameart.org/content/priest
+https://twitter.com/calciumtrice
+http://calciumtrice.tumblr.com/

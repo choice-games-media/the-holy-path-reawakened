@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tilemap.png" id="2_uojlf"]
 [ext_resource type="PackedScene" uid="uid://domqytv6hkexa" path="res://scenes/platform.tscn" id="3_e5tkc"]
 [ext_resource type="PackedScene" uid="uid://dck4u2d32j6dj" path="res://scenes/key.tscn" id="4_7ulg4"]
-[ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/danger-zone.tscn" id="5_t0ifi"]
+[ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="5_t0ifi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilkpk"]
 texture = ExtResource("2_uojlf")
@@ -352,8 +352,8 @@ position = Vector2(136, -104)
 position = Vector2(0, 150)
 shape = SubResource("WorldBoundaryShape2D_ignnk")
 
-[node name="Danger Zone" parent="." instance=ExtResource("5_t0ifi")]
+[node name="Spikes" parent="." instance=ExtResource("5_t0ifi")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Danger Zone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
 position = Vector2(72, 11.5)
 shape = SubResource("RectangleShape2D_a2eyv")

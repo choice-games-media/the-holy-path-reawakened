@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://meawafy7h005"]
 
 [ext_resource type="PackedScene" uid="uid://cdn6c38jc5v50" path="res://scenes/player.tscn" id="1_vm2vl"]
-[ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tilemap.png" id="2_uojlf"]
+[ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_uojlf"]
 [ext_resource type="PackedScene" uid="uid://domqytv6hkexa" path="res://scenes/platform.tscn" id="3_e5tkc"]
 [ext_resource type="PackedScene" uid="uid://gqdqqw1alhtx" path="res://scenes/coin.tscn" id="3_wpj1o"]
 [ext_resource type="PackedScene" uid="uid://dck4u2d32j6dj" path="res://scenes/key.tscn" id="4_7ulg4"]
@@ -402,10 +402,3 @@ shape = SubResource("WorldBoundaryShape2D_ignnk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Spikes"]
 position = Vector2(72, 11.5)
 shape = SubResource("RectangleShape2D_a2eyv")
-
-[connection signal="body_entered" from="Foreground/Coin" to="Foreground/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/Key" to="Foreground/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@18030" to="Foreground/@Area2D@18030" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@18031" to="Foreground/@Area2D@18031" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@18032" to="Foreground/@Area2D@18032" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@18033" to="Foreground/@Area2D@18033" method="_on_body_entered"]

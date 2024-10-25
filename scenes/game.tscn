@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://meawafy7h005"]
+[gd_scene load_steps=18 format=4 uid="uid://meawafy7h005"]
 
 [ext_resource type="PackedScene" uid="uid://cdn6c38jc5v50" path="res://scenes/player.tscn" id="1_vm2vl"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tilemap.png" id="2_uojlf"]
 [ext_resource type="PackedScene" uid="uid://domqytv6hkexa" path="res://scenes/platform.tscn" id="3_e5tkc"]
 [ext_resource type="PackedScene" uid="uid://gqdqqw1alhtx" path="res://scenes/coin.tscn" id="3_wpj1o"]
 [ext_resource type="PackedScene" uid="uid://dck4u2d32j6dj" path="res://scenes/key.tscn" id="4_7ulg4"]
+[ext_resource type="Texture2D" uid="uid://dnbu7lme0t8an" path="res://assets/sprites/background.png" id="4_ks2sj"]
 [ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="5_t0ifi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilkpk"]
@@ -279,6 +280,38 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ilkpk")
 sources/1 = SubResource("TileSetScenesCollectionSource_yl6b0")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_piomj"]
+texture = ExtResource("4_ks2sj")
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(24, 24)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t5kpe"]
+sources/0 = SubResource("TileSetAtlasSource_piomj")
+
 [sub_resource type="Animation" id="Animation_ohxp5"]
 resource_name = "test"
 length = 2.0
@@ -324,9 +357,14 @@ size = Vector2(50, 7)
 
 [node name="Game" type="Node2D"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="Foreground" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD3/wEAAAABAAEAAAD4/wEAAAACAAEAAAD8/wEAAAACAAEAAAD9/wEAAAACAAEAAAD+/wEAAAACAAEAAAD//wEAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD3/wIAAAABAAYAAAD3/wMAAAABAAYAAAD3/wQAAAABAAYAAAD5/wEAAAACAAEAAAD6/wEAAAACAAEAAAD7/wEAAAACAAEAAAD//wAAAAARAAYAAAD///3/AAASAAYAAAD+//v/AAARAAAAAAD+//z/AAARAAIAAAD///v/AAASAAAAAAD///z/AAARAAQAAAAAAPv/AAATAAAAAAAAAPz/AAATAAIAAAD///7/AAAQAAUAAAD/////AAAQAAUAAAAAAP3/AAATAAQAAAABAP3/AAATAAYAAAD3/wUAAAABAAYAAAD3/wYAAAABAAYAAAD4/wcAAAACAAcAAAD5/wcAAAACAAcAAAD6/wcAAAACAAcAAAD7/wcAAAACAAcAAAD8/wcAAAACAAcAAAD9/wcAAAACAAcAAAD+/wcAAAACAAcAAAD//wcAAAACAAcAAAAAAAcAAAACAAcAAAABAAcAAAACAAcAAAACAAcAAAACAAcAAAADAAcAAAACAAcAAAAHAPv/AAAOAAcAAAAIAPv/AAAOAAcAAAAGAPv/AAANAAcAAAD4/wIAAAAEAAUAAAD4/wMAAAACAAYAAAD4/wQAAAAEAAUAAAD4/wUAAAAEAAUAAAD5/wUAAAACAAYAAAD5/wYAAAACAAYAAAD6/wUAAAACAAYAAAD4/wYAAAACAAYAAAD6/wYAAAAEAAUAAAD7/wYAAAACAAYAAAD8/wYAAAAEAAUAAAD9/wYAAAACAAYAAAD+/wYAAAACAAYAAAD//wYAAAACAAYAAAAAAAYAAAAEAAUAAAABAAYAAAACAAYAAAACAAYAAAACAAYAAAADAAYAAAACAAYAAAADAAUAAAAEAAUAAAACAAUAAAAEAAUAAAABAAUAAAAEAAUAAAAAAAUAAAACAAYAAAD//wUAAAAEAAUAAAD+/wUAAAAEAAUAAAD9/wUAAAACAAYAAAD8/wUAAAAEAAUAAAD7/wUAAAAEAAUAAAD7/wQAAAAEAAUAAAD8/wQAAAAEAAUAAAD8/wMAAAAEAAUAAAD7/wMAAAACAAYAAAD6/wMAAAACAAYAAAD6/wQAAAACAAYAAAD5/wQAAAAEAAUAAAD5/wMAAAACAAYAAAD5/wIAAAACAAYAAAD6/wIAAAAEAAUAAAD7/wIAAAAEAAUAAAD8/wIAAAAEAAUAAAD9/wIAAAACAAYAAAD+/wIAAAACAAYAAAD9/wMAAAAEAAUAAAD9/wQAAAACAAYAAAD+/wQAAAACAAYAAAD+/wMAAAAEAAUAAAD//wMAAAAEAAUAAAD//wQAAAACAAYAAAAAAAMAAAACAAYAAAD//wIAAAAEAAUAAAAAAAIAAAACAAYAAAABAAIAAAACAAYAAAABAAMAAAACAAYAAAABAAQAAAAEAAUAAAAAAAQAAAAEAAUAAAACAAQAAAACAAYAAAACAAMAAAACAAYAAAACAAIAAAAEAAUAAAD3/wcAAAABAAcAAAADAAMAAAAEAAUAAAADAAQAAAACAAYAAAD6//3/AQAAAAAAAgADAAAAAAAIAAMAAAAEAAAAAAAIAAMAAAAFAAAAAAAIAAMAAAAGAAMAAAAIAAIAAAAGAAQAAAAEAAUAAAAGAAUAAAACAAYAAAAGAAYAAAAEAAUAAAAGAAcAAAACAAcAAAAHAAMAAAAJAAIAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAHAAYAAAACAAYAAAAHAAcAAAACAAcAAAAIAAMAAAAJAAIAAAAIAAQAAAACAAYAAAAIAAUAAAAEAAUAAAAIAAYAAAAEAAUAAAAIAAcAAAACAAcAAAAJAAMAAAAJAAIAAAAKAAMAAAAKAAIAAAALAAMAAAAKAAQAAAAMAAMAAAALAAQAAAANAAMAAAALAAQAAAAOAAMAAAALAAQAAAAPAAMAAAALAAQAAAAQAAMAAAALAAQAAAAJAAQAAAAEAAUAAAAJAAUAAAACAAYAAAAJAAYAAAACAAYAAAAJAAcAAAACAAcAAAAKAAQAAAADAAYAAAAKAAUAAAADAAYAAAAKAAYAAAADAAYAAAAKAAcAAAADAAcAAAARAAMAAAALAAQAAAASAAMAAAAMAAQAAAADAAEAAAACAAAAAAAEAAEAAAACAAAAAAAFAAEAAAADAAAAAAAFAAIAAAADAAYAAAADAAIAAAAEAAUAAAAEAAIAAAAEAAUAAAAEAAMAAAAEAAUAAAAFAAMAAAAEAAUAAAAEAAQAAAAEAAUAAAAFAAQAAAAEAAUAAAAFAAUAAAAEAAUAAAAEAAUAAAAEAAUAAAAEAAYAAAAEAAUAAAAFAAYAAAAEAAUAAAAEAAcAAAACAAcAAAAFAAcAAAACAAcAAAAKAPv/AAAPAAcAAAAJAPv/AAAOAAcAAAD5//7/AAAIAAIAAAD7//7/AAAKAAIAAAD6//7/AAAJAAIAAAAIAPn/AQAAAAAAAQD///r/AQAAAAAAAgAIAP//AQAAAAAAAgANAAIAAQAAAAAAAgAVAAIAAQAAAAAAAgA=")
 tile_set = SubResource("TileSet_p325q")
+
+[node name="Background" type="TileMapLayer" parent="."]
+z_index = -2
+y_sort_enabled = true
+tile_set = SubResource("TileSet_t5kpe")
 
 [node name="Player" parent="." instance=ExtResource("1_vm2vl")]
 
@@ -339,7 +377,7 @@ position_smoothing_enabled = true
 [node name="Platforms" type="Node" parent="."]
 
 [node name="UpwardsPlatform" parent="Platforms" instance=ExtResource("3_e5tkc")]
-position = Vector2(135, 5)
+position = Vector2(136, 5)
 
 [node name="MovingPlatform" parent="Platforms" instance=ExtResource("3_e5tkc")]
 position = Vector2(190, 56)
@@ -365,9 +403,9 @@ shape = SubResource("WorldBoundaryShape2D_ignnk")
 position = Vector2(72, 11.5)
 shape = SubResource("RectangleShape2D_a2eyv")
 
-[connection signal="body_entered" from="TileMapLayer/Coin" to="TileMapLayer/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/Key" to="TileMapLayer/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@43668" to="TileMapLayer/@Area2D@43668" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@43669" to="TileMapLayer/@Area2D@43669" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@43670" to="TileMapLayer/@Area2D@43670" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@43671" to="TileMapLayer/@Area2D@43671" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/Coin" to="Foreground/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/Key" to="Foreground/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@18030" to="Foreground/@Area2D@18030" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@18031" to="Foreground/@Area2D@18031" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@18032" to="Foreground/@Area2D@18032" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@18033" to="Foreground/@Area2D@18033" method="_on_body_entered"]

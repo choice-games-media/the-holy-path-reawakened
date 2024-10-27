@@ -3,11 +3,11 @@ extends Area2D
 @onready var timer: Timer = $Timer
 
 
-func _on_body_entered(_body: Node2D) -> void:
-	print("Player died!")
-	# This also moves the camera, since it is a child of the player
-	#body.queue_free()
-	timer.start()
+func _on_body_entered(body: Node2D) -> void:
+	if body.dead == false:  # To prevent the player from dying multiple times and resetting the timer
+		body.get_node("AnimatedSprite2D").play("die")
+		body.dead = true
+		timer.start()
 
 
 func _on_timer_timeout() -> void:

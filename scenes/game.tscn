@@ -403,7 +403,7 @@ autoplay = "Back and Forth"
 [node name="Void" parent="Killzones" instance=ExtResource("5_t0ifi")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Void"]
-position = Vector2(0, 150)
+position = Vector2(0, 135)
 shape = SubResource("WorldBoundaryShape2D_ignnk")
 
 [node name="Spikes" parent="Killzones" instance=ExtResource("5_t0ifi")]
@@ -414,10 +414,3 @@ shape = SubResource("RectangleShape2D_a2eyv")
 
 [node name="Enemy" parent="." instance=ExtResource("8_bw6sk")]
 position = Vector2(-121, 22)
-
-[connection signal="body_entered" from="Foreground/Coin" to="Foreground/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/Key" to="Foreground/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@37668" to="Foreground/@Area2D@37668" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@37669" to="Foreground/@Area2D@37669" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@37670" to="Foreground/@Area2D@37670" method="_on_body_entered"]
-[connection signal="body_entered" from="Foreground/@Area2D@37671" to="Foreground/@Area2D@37671" method="_on_body_entered"]

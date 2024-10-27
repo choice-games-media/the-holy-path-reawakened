@@ -1,6 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvlogevc6dmj2"]
+[gd_scene load_steps=18 format=3 uid="uid://dvlogevc6dmj2"]
 
 [ext_resource type="Texture2D" uid="uid://dxpxcgotb8m3m" path="res://assets/sprites/robot_tileset.png" id="1_2g0vo"]
+[ext_resource type="Script" path="res://scripts/robot.gd" id="1_vabga"]
+[ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="2_nad0v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nb76c"]
 atlas = ExtResource("1_2g0vo")
@@ -99,10 +101,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnn7h"]
+size = Vector2(10, 18)
+
+[node name="Robot" type="Node2D"]
+script = ExtResource("1_vabga")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1wbe6")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.103295
+
+[node name="Killzone" parent="." instance=ExtResource("2_nad0v")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("RectangleShape2D_dnn7h")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-6, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(7, 0)

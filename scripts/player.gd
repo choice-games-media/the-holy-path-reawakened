@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 			sprite.flip_h = false
 		elif direction < 0:  # Moving left
 			sprite.flip_h = true
-		
+
 		# Plays sprite animations.
 		if is_on_floor():  # Stationary
 			if direction == 0:  # Stationary

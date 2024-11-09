@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://meawafy7h005"]
+[gd_scene load_steps=20 format=4 uid="uid://meawafy7h005"]
 
 [ext_resource type="PackedScene" uid="uid://cdn6c38jc5v50" path="res://scenes/player.tscn" id="1_vm2vl"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_uojlf"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dnbu7lme0t8an" path="res://assets/sprites/background.png" id="4_ks2sj"]
 [ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="5_t0ifi"]
 [ext_resource type="PackedScene" uid="uid://dvlogevc6dmj2" path="res://scenes/robot.tscn" id="8_bw6sk"]
+[ext_resource type="FontFile" uid="uid://dj6utnp08pego" path="res://assets/fonts/Pixeled.ttf" id="9_oliee"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilkpk"]
 texture = ExtResource("2_uojlf")
@@ -413,4 +414,14 @@ position = Vector2(72, 11.5)
 shape = SubResource("RectangleShape2D_a2eyv")
 
 [node name="Enemy" parent="." instance=ExtResource("8_bw6sk")]
-position = Vector2(-121, 22)
+position = Vector2(-121, 24)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = -35.0
+offset_right = 123.0
+offset_bottom = -21.0
+theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+theme_override_fonts/font = ExtResource("9_oliee")
+theme_override_font_sizes/font_size = 5
+text = "WASD or arrow keys to move"

@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://mwswnilwdhd0"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_t6ukj"]
+[ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_vf1i7"]
+[ext_resource type="FontFile" uid="uid://hy82bwix5lnn" path="res://assets/fonts/UnifrakturCook-Bold.ttf" id="3_c5hlg"]
+[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/buttons.tres" id="4_ot4kw"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6ukj")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0.501407, 0.501406, 0.501406, 1)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vf1i7")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.5
+offset_right = 107.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 50
+
+[node name="Title" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.113725, 0.0823529, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_c5hlg")
+theme_override_font_sizes/font_size = 100
+text = "The Holy Path: Reawakened"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+offset_right = 70.0
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PlayButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ot4kw")
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ot4kw")
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ot4kw")
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_ot4kw")
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

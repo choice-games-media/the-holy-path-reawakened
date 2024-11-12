@@ -363,7 +363,7 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ignnk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2eyv"]
-size = Vector2(50, 7)
+size = Vector2(32, 7)
 
 [node name="Game" type="Node2D"]
 
@@ -425,3 +425,10 @@ theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
 theme_override_fonts/font = ExtResource("9_oliee")
 theme_override_font_sizes/font_size = 5
 text = "WASD or arrow keys to move"
+
+[connection signal="body_entered" from="Foreground/Coin" to="Foreground/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/Key" to="Foreground/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@17239" to="Foreground/@Area2D@17239" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@17240" to="Foreground/@Area2D@17240" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@17241" to="Foreground/@Area2D@17241" method="_on_body_entered"]
+[connection signal="body_entered" from="Foreground/@Area2D@17242" to="Foreground/@Area2D@17242" method="_on_body_entered"]

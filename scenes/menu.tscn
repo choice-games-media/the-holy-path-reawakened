@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://mwswnilwdhd0"]
+[gd_scene load_steps=6 format=3 uid="uid://mwswnilwdhd0"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_t6ukj"]
 [ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_vf1i7"]
+[ext_resource type="FontFile" uid="uid://b0gwsbgwn8bts" path="res://assets/fonts/Raleway-Medium.ttf" id="3_60gly"]
 [ext_resource type="FontFile" uid="uid://hy82bwix5lnn" path="res://assets/fonts/UnifrakturCook-Bold.ttf" id="3_c5hlg"]
 [ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/buttons.tres" id="4_ot4kw"]
 
@@ -37,7 +38,20 @@ offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_constants/margin_top = 50
 
-[node name="Title" type="Label" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.429002, 0.881516, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_60gly")
+theme_override_font_sizes/font_size = 40
+text = "- Choice Game 5 -"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.113725, 0.0823529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)

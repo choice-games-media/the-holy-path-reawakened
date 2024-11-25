@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://meawafy7h005"]
+[gd_scene load_steps=24 format=4 uid="uid://meawafy7h005"]
 
 [ext_resource type="PackedScene" uid="uid://cdn6c38jc5v50" path="res://scenes/player.tscn" id="1_vm2vl"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_uojlf"]
@@ -401,7 +401,10 @@ _data = {
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ignnk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2eyv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swpmj"]
+size = Vector2(42, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qscxg"]
 size = Vector2(8, 40)
 
 [node name="Game" type="Node2D"]
@@ -457,15 +460,15 @@ shape = SubResource("WorldBoundaryShape2D_ignnk")
 
 [node name="Spikes" parent="World/Killzones" instance=ExtResource("5_t0ifi")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Killzones/Spikes"]
-position = Vector2(72, 11.5)
-shape = SubResource("RectangleShape2D_a2eyv")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Killzones/Spikes"]
+position = Vector2(71, 11.5)
+shape = SubResource("RectangleShape2D_swpmj")
 
 [node name="Spikes2" parent="World/Killzones" instance=ExtResource("5_t0ifi")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Killzones/Spikes2"]
 position = Vector2(-308, 56)
-shape = SubResource("RectangleShape2D_a2eyv")
+shape = SubResource("RectangleShape2D_qscxg")
 
 [node name="Characters" type="Node" parent="."]
 
@@ -527,12 +530,12 @@ text = "Falling hurts"
 
 [connection signal="body_entered" from="World/Foreground/Coin" to="World/Foreground/Coin" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Foreground/Key" to="World/Foreground/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23039" to="World/Foreground/@Area2D@23039" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23040" to="World/Foreground/@Area2D@23040" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23041" to="World/Foreground/@Area2D@23041" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23042" to="World/Foreground/@Area2D@23042" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23043" to="World/Foreground/@Area2D@23043" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23044" to="World/Foreground/@Area2D@23044" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23045" to="World/Foreground/@Area2D@23045" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23046" to="World/Foreground/@Area2D@23046" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@23047" to="World/Foreground/@Area2D@23047" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38803" to="World/Foreground/@Area2D@38803" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38804" to="World/Foreground/@Area2D@38804" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38805" to="World/Foreground/@Area2D@38805" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38806" to="World/Foreground/@Area2D@38806" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38807" to="World/Foreground/@Area2D@38807" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38808" to="World/Foreground/@Area2D@38808" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38809" to="World/Foreground/@Area2D@38809" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38810" to="World/Foreground/@Area2D@38810" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@38811" to="World/Foreground/@Area2D@38811" method="_on_body_entered"]

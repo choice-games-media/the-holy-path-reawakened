@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://igtoaofdblne"]
 
-[ext_resource type="FontFile" uid="uid://dj6utnp08pego" path="res://assets/fonts/Pixeled.ttf" id="1_d7dp8"]
+[ext_resource type="FontFile" uid="uid://c0pfp6ylxigmk" path="res://assets/fonts/alagard.ttf" id="1_3n8tu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8itd"]
 
@@ -15,8 +15,8 @@
 [resource]
 Button/colors/font_hover_color = Color(0.94902, 0.94902, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0.94902, 1)
-Button/font_sizes/font_size = 24
-Button/fonts/font = ExtResource("1_d7dp8")
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_3n8tu")
 Button/styles/disabled = SubResource("StyleBoxEmpty_q8itd")
 Button/styles/focus = SubResource("StyleBoxEmpty_2c6mx")
 Button/styles/hover = SubResource("StyleBoxEmpty_oqihj")

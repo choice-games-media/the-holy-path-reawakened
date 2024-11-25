@@ -1,7 +1,7 @@
 extends Node2D
 
-const SPEED = 50
-var direction = 1  # Positive values = right, negative values = left
+const SPEED: int = 50
+var direction: int = 1  # Positive values = right, negative values = left
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D

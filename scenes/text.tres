@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://igtoaofdblne"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://igtoaofdblne"]
 
-[ext_resource type="FontFile" uid="uid://c0pfp6ylxigmk" path="res://assets/fonts/alagard.ttf" id="1_3n8tu"]
+[ext_resource type="FontFile" uid="uid://c0pfp6ylxigmk" path="res://assets/fonts/alagard.ttf" id="1_mw85p"]
+[ext_resource type="FontFile" uid="uid://dj6utnp08pego" path="res://assets/fonts/Pixeled.ttf" id="2_aihiu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8itd"]
 
@@ -13,12 +14,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6gvu"]
 
 [resource]
-Button/colors/font_hover_color = Color(0.94902, 0.94902, 0, 1)
-Button/colors/font_pressed_color = Color(0, 0, 0.94902, 1)
+Button/colors/font_hover_color = Color(1, 0.647059, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0.352941, 1, 1)
 Button/font_sizes/font_size = 50
-Button/fonts/font = ExtResource("1_3n8tu")
+Button/fonts/font = ExtResource("1_mw85p")
 Button/styles/disabled = SubResource("StyleBoxEmpty_q8itd")
 Button/styles/focus = SubResource("StyleBoxEmpty_2c6mx")
 Button/styles/hover = SubResource("StyleBoxEmpty_oqihj")
 Button/styles/normal = SubResource("StyleBoxEmpty_7y7xu")
 Button/styles/pressed = SubResource("StyleBoxEmpty_q6gvu")
+Label/colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+Label/constants/line_spacing = -2
+Label/font_sizes/font_size = 5
+Label/fonts/font = ExtResource("2_aihiu")

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_vf1i7"]
 [ext_resource type="FontFile" uid="uid://b0gwsbgwn8bts" path="res://assets/fonts/Raleway-Medium.ttf" id="3_60gly"]
 [ext_resource type="FontFile" uid="uid://hy82bwix5lnn" path="res://assets/fonts/UnifrakturCook-Bold.ttf" id="3_c5hlg"]
-[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/buttons.tres" id="4_ot4kw"]
+[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/text.tres" id="4_ot4kw"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

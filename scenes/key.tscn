@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_aandt"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="1_eby3y"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_q883t"]
 
 [node name="Key" type="Area2D"]

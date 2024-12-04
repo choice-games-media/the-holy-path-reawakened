@@ -571,20 +571,47 @@ horizontal_alignment = 1
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Victory" type="Label" parent="HUD"]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -33.0
-offset_top = -11.5
-offset_right = 33.0
-offset_bottom = 11.5
+[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 5
+
+[node name="Coins" type="Label" parent="HUD/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("9_h5jt3")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Coins: 0"
+
+[node name="Victory" type="Label" parent="HUD/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("9_h5jt3")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "You win!"
+
+[connection signal="body_entered" from="World/Foreground/Coin" to="World/Foreground/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/Key" to="World/Foreground/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18386" to="World/Foreground/@Area2D@18386" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18387" to="World/Foreground/@Area2D@18387" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18388" to="World/Foreground/@Area2D@18388" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18389" to="World/Foreground/@Area2D@18389" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18390" to="World/Foreground/@Area2D@18390" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18391" to="World/Foreground/@Area2D@18391" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18392" to="World/Foreground/@Area2D@18392" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18393" to="World/Foreground/@Area2D@18393" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18394" to="World/Foreground/@Area2D@18394" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@18395" to="World/Foreground/@Area2D@18395" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/Flag" to="World/Foreground/Flag" method="_on_body_entered"]

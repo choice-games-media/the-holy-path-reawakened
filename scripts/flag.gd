@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var victory_label: Label = get_tree().current_scene.get_node("HUD/Victory")
+@onready var victory_label: Label = get_tree().current_scene.get_node("HUD/MarginContainer/Victory")
 
 
 func _on_body_entered(body: Node2D) -> void:

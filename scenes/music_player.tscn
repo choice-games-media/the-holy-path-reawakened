@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb247acm8s0pe"]
+
+[ext_resource type="AudioStream" uid="uid://bxxyf1kww8kkh" path="res://assets/music/Elektronomia - Sky High.mp3" id="1_acjj2"]
+[ext_resource type="Script" path="res://scripts/music_player.gd" id="2_8cn21"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_acjj2")
+bus = &"Music"
+script = ExtResource("2_8cn21")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

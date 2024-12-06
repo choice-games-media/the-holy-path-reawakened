@@ -8,7 +8,7 @@ var coins_label: Label = get_tree().get_current_scene().get_node("HUD/MarginCont
 
 func unlock_door():
 	keys += 1
-	get_tree().get_current_scene().get_node("World/Door%s/CollisionShape2D" % keys).queue_free()
+	get_tree().get_current_scene().get_node("World/Door" + str(keys)).queue_free()
 
 
 func add_coin():

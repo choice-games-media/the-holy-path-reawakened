@@ -45,6 +45,7 @@ theme_override_constants/separation = -15
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.429002, 0.881516, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_60gly")
@@ -54,6 +55,7 @@ horizontal_alignment = 1
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.113725, 0.0823529, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_c5hlg")
@@ -69,6 +71,7 @@ theme_override_constants/separation = 25
 
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
 text = "Play"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer2"]
@@ -81,6 +84,7 @@ text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../PlayButton")
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/PlayButton" to="." method="_on_play_button_pressed"]

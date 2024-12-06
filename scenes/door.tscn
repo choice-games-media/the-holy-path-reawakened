@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkacowvywld4s"]
+
+[ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_gs565"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qhoq7"]
+distance = 8.0
+
+[node name="Door" type="StaticBody2D"]
+position = Vector2(-511, 0)
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("2_gs565")
+region_enabled = true
+region_rect = Rect2(190, 114, 18, 18)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-11, 0)
+rotation = -1.5708
+texture = ExtResource("2_gs565")
+region_enabled = true
+region_rect = Rect2(190, 108, 18, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.61999e-06, -1)
+shape = SubResource("WorldBoundaryShape2D_qhoq7")

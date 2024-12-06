@@ -102,7 +102,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnn7h"]
-size = Vector2(10, 16)
+size = Vector2(8, 12)
 
 [node name="Robot" type="Node2D"]
 script = ExtResource("1_vabga")
@@ -115,7 +115,7 @@ autoplay = "walk"
 [node name="Killzone" parent="." instance=ExtResource("2_nad0v")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, -1)
+position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dnn7h")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]

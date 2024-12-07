@@ -2,8 +2,11 @@ extends CharacterBody2D
 
 const SPEED: float = 150.0
 const JUMP_VELOCITY: float = -(SPEED * 2)
+var direction: float
 var dead: bool = false
+var frozen: bool = false
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 func _physics_process(delta: float) -> void:
@@ -13,12 +16,16 @@ func _physics_process(delta: float) -> void:
 
 	if not dead:
 		# Handle jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_just_pressed("jump") and is_on_floor() and not frozen:
 			sprite.play("jump")
+			jump_sound.play()
 			velocity.y = JUMP_VELOCITY
 
 		# Get the input direction. Returns: -1, 0, 1
-		var direction := Input.get_axis("move_left", "move_right")
+		if not frozen:
+			direction = Input.get_axis("move_left", "move_right")
+		else:
+			direction = 0
 
 		# Flips the sprite according to the player's direction.
 		# The player's sprite starts facing right.

@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://cdn6c38jc5v50"]
+[gd_scene load_steps=57 format=3 uid="uid://cdn6c38jc5v50"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_eyqe8"]
 [ext_resource type="Texture2D" uid="uid://bbxd1sq17cawl" path="res://assets/sprites/priest.png" id="1_wmssd"]
+[ext_resource type="AudioStream" uid="uid://byt7dacjk23lc" path="res://assets/sfx/jump.wav" id="3_uqnbf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rer6"]
 atlas = ExtResource("1_wmssd")
@@ -409,3 +410,7 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_dhyfk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uqnbf")
+bus = &"SFX"

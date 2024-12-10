@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_vf1i7"]
 [ext_resource type="FontFile" uid="uid://b0gwsbgwn8bts" path="res://assets/fonts/Raleway-Medium.ttf" id="3_60gly"]
 [ext_resource type="FontFile" uid="uid://hy82bwix5lnn" path="res://assets/fonts/UnifrakturCook-Bold.ttf" id="3_c5hlg"]
-[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/text.tres" id="4_ot4kw"]
+[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://assets/themes/menu.tres" id="4_ot4kw"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -34,16 +34,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme = ExtResource("4_ot4kw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = -15
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Subtitle" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.429002, 0.881516, 0, 1)
@@ -66,8 +63,6 @@ text = "The Holy Path: Reawakened"
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-theme = ExtResource("4_ot4kw")
-theme_override_constants/separation = 25
 
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
@@ -88,4 +83,6 @@ focus_neighbor_bottom = NodePath("../PlayButton")
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]

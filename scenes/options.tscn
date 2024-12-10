@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfnmxf3jla14t"]
+
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_yqtii"]
+[ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_rgglq"]
+[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://assets/themes/menu.tres" id="2_u4cbb"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqtii")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0.501407, 0.501406, 0.501406, 1)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rgglq")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_u4cbb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="MusicSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SfxLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SfxSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SfxSlider" type="HSlider" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Return to Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

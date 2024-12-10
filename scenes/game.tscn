@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dnbu7lme0t8an" path="res://assets/sprites/background.png" id="4_ks2sj"]
 [ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="5_t0ifi"]
 [ext_resource type="PackedScene" uid="uid://dvlogevc6dmj2" path="res://scenes/robot.tscn" id="8_bw6sk"]
-[ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://scenes/text.tres" id="9_h5jt3"]
 [ext_resource type="PackedScene" uid="uid://dkacowvywld4s" path="res://scenes/door.tscn" id="9_j6v8o"]
+[ext_resource type="Theme" uid="uid://b3gabycvdauta" path="res://assets/themes/game.tres" id="12_vpdvg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_waow6"]
 texture = ExtResource("2_uojlf")
@@ -507,7 +507,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme = ExtResource("9_h5jt3")
+theme = ExtResource("12_vpdvg")
 
 [node name="Instructions" type="Label" parent="Hints"]
 layout_mode = 0
@@ -578,16 +578,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 5
+theme = ExtResource("12_vpdvg")
 
 [node name="Coins" type="Label" parent="HUD/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme = ExtResource("9_h5jt3")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "Coins: 0"
@@ -596,23 +592,6 @@ text = "Coins: 0"
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("9_h5jt3")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "You win!"
-
-[connection signal="body_entered" from="World/Foreground/Coin" to="World/Foreground/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/Key" to="World/Foreground/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26497" to="World/Foreground/@Area2D@26497" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26498" to="World/Foreground/@Area2D@26498" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26499" to="World/Foreground/@Area2D@26499" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26500" to="World/Foreground/@Area2D@26500" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26501" to="World/Foreground/@Area2D@26501" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26502" to="World/Foreground/@Area2D@26502" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26503" to="World/Foreground/@Area2D@26503" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26504" to="World/Foreground/@Area2D@26504" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26505" to="World/Foreground/@Area2D@26505" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@26506" to="World/Foreground/@Area2D@26506" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/Flag" to="World/Foreground/Flag" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@27208" to="World/Foreground/@Area2D@27208" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@27209" to="World/Foreground/@Area2D@27209" method="_on_body_entered"]

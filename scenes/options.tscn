@@ -49,11 +49,17 @@ text = "Music Volume"
 
 [node name="MusicSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
+min_value = -80.0
+max_value = 6.0
+value = -4.0
 
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -80.0
+max_value = 6.0
+value = -4.0
 
 [node name="SfxLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -61,14 +67,35 @@ text = "SFX Volume"
 
 [node name="SfxSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
+min_value = -80.0
+max_value = 6.0
 
 [node name="SfxSlider" type="HSlider" parent="MarginContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+min_value = -80.0
+max_value = 6.0
+
+[node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+columns = 2
+
+[node name="FullScreenLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Full Screen"
+
+[node name="FullScreenButton" type="CheckButton" parent="MarginContainer/VBoxContainer/GridContainer2"]
+layout_mode = 2
 
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Return to Menu"
 
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusicSpinBox" to="." method="_on_music_spin_box_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/SfxSpinBox" to="." method="_on_sfx_spin_box_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/GridContainer2/FullScreenButton" to="." method="_on_full_screen_button_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://mwswnilwdhd0"]
+[gd_scene load_steps=8 format=3 uid="uid://mwswnilwdhd0"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_t6ukj"]
 [ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_vf1i7"]
 [ext_resource type="FontFile" uid="uid://b0gwsbgwn8bts" path="res://assets/fonts/Raleway-Medium.ttf" id="3_60gly"]
 [ext_resource type="FontFile" uid="uid://hy82bwix5lnn" path="res://assets/fonts/UnifrakturCook-Bold.ttf" id="3_c5hlg"]
 [ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://assets/themes/menu.tres" id="4_ot4kw"]
+[ext_resource type="AudioStream" uid="uid://cjvasv1sld1rn" path="res://assets/sfx/hover.wav" id="6_vu3ft"]
+[ext_resource type="AudioStream" uid="uid://w7wuhxjsxmsb" path="res://assets/sfx/select.wav" id="7_d0ipq"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -82,7 +84,19 @@ layout_mode = 2
 focus_neighbor_bottom = NodePath("../PlayButton")
 text = "Exit"
 
+[node name="HoverSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vu3ft")
+bus = &"SFX"
+
+[node name="SelectSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_d0ipq")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer2/PlayButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer2/OptionsButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer2/CreditsButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer2/ExitButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]

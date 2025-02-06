@@ -8,3 +8,4 @@ func _on_body_entered(body: Node2D) -> void:
 	# body.get_node("Camera2D").reparent(self)
 	body.frozen = true
 	win_sound.play()
+	game_manager.win_game()

@@ -6,6 +6,10 @@ extends Control
 @onready var sfx_slider: Slider = $MarginContainer/VBoxContainer/GridContainer/SfxSlider
 
 
+func _ready() -> void:
+	SceneTransition.play("fade_from_black")
+
+
 func _on_music_spin_box_value_changed(value: float) -> void:
 	music_slider.set_value(value)
 

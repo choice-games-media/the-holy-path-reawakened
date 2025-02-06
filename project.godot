@@ -18,6 +18,8 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 MusicPlayer="*res://scenes/music_player.tscn"
+SceneTransition="*res://scenes/scene_transition.tscn"
+Global="*res://scripts/global.gd"
 
 [editor_plugins]
 

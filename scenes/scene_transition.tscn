@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://blv8hhp3jmybg"]
 
-[ext_resource type="Script" path="res://scripts/scene_transition.gd" id="1_jrscv"]
+[ext_resource type="Script" uid="uid://cab5r7ubkvp5k" path="res://scripts/scene_transition.gd" id="1_jrscv"]
 
 [sub_resource type="Animation" id="Animation_wk4m2"]
 length = 0.001
@@ -67,10 +67,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8ugy6"]
 _data = {
-"RESET": SubResource("Animation_wk4m2"),
-"fade_from_black": SubResource("Animation_d8rmn"),
-"fade_to_black": SubResource("Animation_g1tfc"),
-"white_flash": SubResource("Animation_8orsj")
+&"RESET": SubResource("Animation_wk4m2"),
+&"fade_from_black": SubResource("Animation_d8rmn"),
+&"fade_to_black": SubResource("Animation_g1tfc"),
+&"white_flash": SubResource("Animation_8orsj")
 }
 
 [node name="SceneTransitions" type="ColorRect"]
@@ -86,5 +86,5 @@ script = ExtResource("1_jrscv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_8ugy6")
+&"": SubResource("AnimationLibrary_8ugy6")
 }

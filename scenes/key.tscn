@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dck4u2d32j6dj"]
 
-[ext_resource type="Script" path="res://scripts/key.gd" id="1_aandt"]
+[ext_resource type="Script" uid="uid://dq64vydqt68a" path="res://scripts/key.gd" id="1_aandt"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="1_eby3y"]
 [ext_resource type="AudioStream" uid="uid://y2pqnvxgpm50" path="res://assets/sfx/key.mp3" id="3_1tv0d"]
 
@@ -100,8 +100,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6q7q"]
 _data = {
-"RESET": SubResource("Animation_vrs3r"),
-"pickup": SubResource("Animation_kaixr")
+&"RESET": SubResource("Animation_vrs3r"),
+&"pickup": SubResource("Animation_kaixr")
 }
 
 [node name="Key" type="Area2D"]

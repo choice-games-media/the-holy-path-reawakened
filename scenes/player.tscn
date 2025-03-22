@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://cdn6c38jc5v50"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_eyqe8"]
+[ext_resource type="Script" uid="uid://c7wpmandr4xrh" path="res://scripts/player.gd" id="1_eyqe8"]
 [ext_resource type="Texture2D" uid="uid://bbxd1sq17cawl" path="res://assets/sprites/priest.png" id="1_wmssd"]
 [ext_resource type="AudioStream" uid="uid://byt7dacjk23lc" path="res://assets/sfx/jump.wav" id="3_uqnbf"]
 

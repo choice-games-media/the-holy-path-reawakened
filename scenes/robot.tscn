@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dvlogevc6dmj2"]
 
 [ext_resource type="Texture2D" uid="uid://dxpxcgotb8m3m" path="res://assets/sprites/robot_tileset.png" id="1_2g0vo"]
-[ext_resource type="Script" path="res://scripts/robot.gd" id="1_vabga"]
+[ext_resource type="Script" uid="uid://cy458d3pw1njc" path="res://scripts/robot.gd" id="1_vabga"]
 [ext_resource type="PackedScene" uid="uid://bxwk6mk0yfshk" path="res://scenes/killzone.tscn" id="2_nad0v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nb76c"]

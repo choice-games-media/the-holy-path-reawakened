@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://meawafy7h005"]
 
 [ext_resource type="PackedScene" uid="uid://cdn6c38jc5v50" path="res://scenes/player.tscn" id="1_vm2vl"]
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_xs3cx"]
+[ext_resource type="Script" uid="uid://gh5mdb5kvmpe" path="res://scripts/game.gd" id="1_xs3cx"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_uojlf"]
 [ext_resource type="PackedScene" uid="uid://domqytv6hkexa" path="res://scenes/platform.tscn" id="3_e5tkc"]
 [ext_resource type="PackedScene" uid="uid://gqdqqw1alhtx" path="res://scenes/coin.tscn" id="3_wpj1o"]
@@ -366,8 +366,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k45jp"]
 _data = {
-"Back and Forth": SubResource("Animation_ohxp5"),
-"RESET": SubResource("Animation_7gojj")
+&"Back and Forth": SubResource("Animation_ohxp5"),
+&"RESET": SubResource("Animation_7gojj")
 }
 
 [sub_resource type="Animation" id="Animation_vspwb"]
@@ -404,8 +404,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cndf7"]
 _data = {
-"RESET": SubResource("Animation_vspwb"),
-"Upwards": SubResource("Animation_fo1pp")
+&"RESET": SubResource("Animation_vspwb"),
+&"Upwards": SubResource("Animation_fo1pp")
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ignnk"]
@@ -442,7 +442,7 @@ position = Vector2(190, 56)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="World/Platforms/MovingPlatform"]
 root_node = NodePath("../../UpwardsPlatform")
 libraries = {
-"": SubResource("AnimationLibrary_k45jp")
+&"": SubResource("AnimationLibrary_k45jp")
 }
 autoplay = "Back and Forth"
 
@@ -457,7 +457,7 @@ position = Vector2(-344, 50)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="World/Platforms/MovingPlatform2"]
 libraries = {
-"": SubResource("AnimationLibrary_cndf7")
+&"": SubResource("AnimationLibrary_cndf7")
 }
 autoplay = "Upwards"
 
@@ -606,16 +606,16 @@ text = "You win!"
 
 [connection signal="body_entered" from="World/Foreground/Coin" to="World/Foreground/Coin" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Foreground/Key" to="World/Foreground/Key" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145261" to="World/Foreground/@Area2D@145261" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145262" to="World/Foreground/@Area2D@145262" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145263" to="World/Foreground/@Area2D@145263" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145264" to="World/Foreground/@Area2D@145264" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145265" to="World/Foreground/@Area2D@145265" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145266" to="World/Foreground/@Area2D@145266" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145267" to="World/Foreground/@Area2D@145267" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145268" to="World/Foreground/@Area2D@145268" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145269" to="World/Foreground/@Area2D@145269" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@145270" to="World/Foreground/@Area2D@145270" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22145" to="World/Foreground/@Area2D@22145" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22146" to="World/Foreground/@Area2D@22146" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22147" to="World/Foreground/@Area2D@22147" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22148" to="World/Foreground/@Area2D@22148" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22149" to="World/Foreground/@Area2D@22149" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22150" to="World/Foreground/@Area2D@22150" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22151" to="World/Foreground/@Area2D@22151" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22152" to="World/Foreground/@Area2D@22152" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22153" to="World/Foreground/@Area2D@22153" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22154" to="World/Foreground/@Area2D@22154" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Foreground/Flag" to="World/Foreground/Flag" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@150968" to="World/Foreground/@Area2D@150968" method="_on_body_entered"]
-[connection signal="body_entered" from="World/Foreground/@Area2D@150969" to="World/Foreground/@Area2D@150969" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22155" to="World/Foreground/@Area2D@22155" method="_on_body_entered"]
+[connection signal="body_entered" from="World/Foreground/@Area2D@22156" to="World/Foreground/@Area2D@22156" method="_on_body_entered"]

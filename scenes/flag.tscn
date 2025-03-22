@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://mo1wqmy1qwq2"]
 
-[ext_resource type="Script" path="res://scripts/flag.gd" id="1_q1ay4"]
+[ext_resource type="Script" uid="uid://0f82821fgnjj" path="res://scripts/flag.gd" id="1_q1ay4"]
 [ext_resource type="Texture2D" uid="uid://du2aobtbb4o1p" path="res://assets/sprites/tileset.png" id="2_qlujf"]
 [ext_resource type="AudioStream" uid="uid://ed1oaryvqsau" path="res://assets/sfx/win.wav" id="3_f7yk6"]
 

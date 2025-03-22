@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfnmxf3jla14t"]
+[gd_scene load_steps=5 format=3 uid="uid://cfnmxf3jla14t"]
 
 [ext_resource type="Script" uid="uid://cresuhol8qe0l" path="res://scripts/options.gd" id="1_yqtii"]
 [ext_resource type="Texture2D" uid="uid://durrrnguvy0im" path="res://assets/sprites/main_menu.png" id="2_rgglq"]
 [ext_resource type="Theme" uid="uid://igtoaofdblne" path="res://assets/themes/menu.tres" id="2_u4cbb"]
+[ext_resource type="AudioStream" uid="uid://w7wuhxjsxmsb" path="res://assets/sfx/select.wav" id="4_bfmaq"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -49,7 +50,7 @@ text = "Music Volume"
 
 [node name="MusicSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-min_value = -80.0
+min_value = -50.0
 max_value = 6.0
 value = -4.0
 
@@ -57,7 +58,7 @@ value = -4.0
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-min_value = -80.0
+min_value = -50.0
 max_value = 6.0
 value = -4.0
 
@@ -67,14 +68,14 @@ text = "SFX Volume"
 
 [node name="SfxSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-min_value = -80.0
+min_value = -50.0
 max_value = 6.0
 
 [node name="SfxSlider" type="HSlider" parent="MarginContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-min_value = -80.0
+min_value = -50.0
 max_value = 6.0
 
 [node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer"]
@@ -92,6 +93,10 @@ layout_mode = 2
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Return to Menu"
+
+[node name="SampleSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_bfmaq")
+bus = &"SFX"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusicSpinBox" to="." method="_on_music_spin_box_value_changed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/GridContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
